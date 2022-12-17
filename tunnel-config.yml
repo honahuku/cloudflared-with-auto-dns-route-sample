@@ -1,0 +1,4 @@
+ingress:
+  - hostname: dev1.honahuku.com
+    service: http://host.docker.internal:80
+  - service: http_status:404

@@ -1,0 +1,11 @@
+volumes:
+  cloudflared-home:
+
+services:
+  cloudflared:
+    image: "ghcr.io/giganticminecraft/cloudflared-with-auto-dns-route"
+    volumes:
+      - cloudflared-home:/opt/mc01
+      - /opt/mc01/tunnel-config.yml:/etc/cloudflared/tunnel-config.yml
+    environment:
+      TUNNEL_NAME: mc01
